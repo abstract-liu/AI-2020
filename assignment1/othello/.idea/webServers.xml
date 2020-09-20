@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0088c609-690a-4f0b-a2aa-7fbc80db5ffe" name="wenhao@lab:22" url="http:///">
+        <fileTransfer host="lab" port="22" accessType="SFTP" authAgent="true">
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

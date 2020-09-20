@@ -1,0 +1,92 @@
+kind: eval
+
+# param for eval
+player:
+  - kind: mcts
+    param:
+      terminal_condition: 59
+      c_puct: 7
+      p: 0.25
+      times: 1
+      thread_nums: 4
+      look_up_table: null
+  - kind: mcts
+    param:
+      terminal_condition: 59
+      c_puct: 7
+      p: 0.25
+      times: 1
+      thread_nums: 4
+      look_up_table: data
+  - kind: minimax
+    param:
+      cut_off_depth: 3
+      times: 1
+      thread_nums: 4
+      look_up_table: best_model/minimax_manual
+  - kind: minimax
+    param:
+      cut_off_depth: 3
+      times: 1
+      thread_nums: 4
+      look_up_table: null
+
+game:
+  width: 8
+  height: 8
+  times: 48
+
+thread: 4
+
+# param for manual and create
+minimax:
+  cut_off_depth: 3
+  times: 3
+  thread_nums: null
+  look_up_table: null
+
+mcts:
+  terminal_condition: 60
+  c_puct: 5
+  p: 0.25
+  times: 3
+  thread_nums: null
+  look_up_table: null
+
+manual:
+  path: data
+  kind: mcts
+  thread: null
+  player: null
+#  player: data/data.pkl
+
+play_out:
+  times: 10
+  depth:
+    - 0
+    - 3
+
+# global setting
+debug: true
+
+log:
+  path: log/log.txt
+  display: True
+
+#default:
+#  - kind: minimax
+#    param:
+#      cut_off_depth: 3
+#      times: 1
+#      thread_nums: 4
+#  - kind: mcts
+#    param:
+#      terminal_condition: 59
+#      c_puct: 1
+#      times: 1
+#      thread_nums: 4
+#      look_up_table: best_model/mcts_manual
+#  - kind: random
+#    param: {}
+#  - kind: human
+#    param: {}

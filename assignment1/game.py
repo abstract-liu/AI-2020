@@ -117,7 +117,6 @@ class Game(object):
                     # 获取落子位置
                     action = func_timeout(60, self.current_player.get_move,
                                           kwargs={'board': self.board})
-                    action = self.current_player.get_move(self.board)
                     # 如果 action 是 Q 则说明人类想结束比赛
                     if action == "Q":
                         # 说明人类想结束游戏，即根据棋子个数定输赢。
